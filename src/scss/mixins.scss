@@ -1,0 +1,9 @@
+@mixin flexColumns($count, $gap) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $gap;
+
+    & > * {
+        flex: 0 0 calc(100% / $count - $gap * ($count - 1) / $count);
+    }
+}

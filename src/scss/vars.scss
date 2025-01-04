@@ -1,0 +1,34 @@
+// Container
+$conteinerWidth: 1120 + px;
+$containerPadding: 10 + px;
+
+// Breakpoints
+$breakpoint1440: 1439.98 + px;
+$breakpoint1400: 1399.98 + px;
+$breakpoint1200: 1199.98 + px;
+$breakpoint1024: 1023.98 + px;
+$breakpoint992: 991.98 + px;
+$breakpoint768: 767.98 + px;
+$breakpoint576: 575.98 + px;
+$breakpoint480: 479.98 + px;
+
+// Colors
+$colorWhite: #FFFFFF;
+$colorBlack: #202020;
+$colorMain: #3E68AA;
+$colorGray: #999999;
+$colorGradient: linear-gradient(89.13deg, #3E68AA -13.87%, #A2BCDB 66.23%, #3E68AA 154.77%);
+
+
+// Fonts
+$fontPrimary: TTFirsNeue;
+
+// Layers
+$headerLayer: 9;
+$popupLayer: 10;
+
+// Burger
+$burgerBreakpoint: $breakpoint1200;
+
+// Transitions
+$quickTransition: all 120ms ease-out;
