@@ -1,0 +1,15 @@
+.h1 {
+    font-weight: 600;
+    font-size: clamp(32px, 6.4vw, 64px);
+
+    span {
+        background: $colorGradient;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
+.text {
+    font-size: clamp(16px, 3.2vw, 32px);
+    line-height: 1.1;
+}

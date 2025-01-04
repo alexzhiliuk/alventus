@@ -67,3 +67,19 @@ button {
     overflow-y: hidden;
     overflow-x: hidden;
 }
+
+.btn {
+    padding: 15px 20px;
+    border-radius: 100px;
+    border: 1px solid $colorWhite;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    font-size: 14px;
+    line-height: 1.1;
+
+    text-wrap: nowrap;
+}

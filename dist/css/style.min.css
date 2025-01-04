@@ -515,6 +515,34 @@ button {
   overflow-x: hidden;
 }
 
+.btn {
+  padding: 15px 20px;
+  border-radius: 100px;
+  border: 1px solid #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 14px;
+  line-height: 1.1;
+  text-wrap: nowrap;
+}
+
+.h1 {
+  font-weight: 600;
+  font-size: clamp(32px, 6.4vw, 64px);
+}
+.h1 span {
+  background: linear-gradient(89.13deg, #3E68AA -13.87%, #A2BCDB 66.23%, #3E68AA 154.77%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text {
+  font-size: clamp(16px, 3.2vw, 32px);
+  line-height: 1.1;
+}
+
 .header {
   position: sticky;
   top: 0;
@@ -847,6 +875,56 @@ button {
   color: #999999;
   padding: 12px 0;
   display: flex;
+}
+
+.hero {
+  margin-top: 32px;
+}
+.hero * {
+  color: #FFFFFF;
+}
+.hero__inner {
+  background: url(../img/hero/hero.png) center center/cover no-repeat;
+  border-radius: 16px;
+}
+.hero__container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: clamp(60px, 12vw, 120px) 0;
+}
+@media screen and (max-width: 991.98px) {
+  .hero__container {
+    flex-direction: column;
+    gap: 32px;
+  }
+}
+.hero__aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+@media screen and (max-width: 991.98px) {
+  .hero__aside {
+    order: 2;
+  }
+  .hero__aside .btn {
+    max-width: max-content;
+  }
+}
+.hero__content {
+  flex: 0 1 770px;
+  display: flex;
+  flex-direction: column;
+}
+.hero__content .text {
+  max-width: 723px;
+  margin-top: 1em;
+}
+@media screen and (max-width: 991.98px) {
+  .hero__content {
+    flex: unset;
+  }
 }
 
 @font-face {
