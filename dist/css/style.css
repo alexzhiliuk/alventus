@@ -515,6 +515,11 @@ button {
   overflow-x: hidden;
 }
 
+.lock-clip {
+  overflow-y: clip;
+  overflow-x: clip;
+}
+
 .btn {
   padding: 15px 20px;
   border-radius: 100px;
@@ -528,6 +533,28 @@ button {
   text-wrap: nowrap;
 }
 
+.section {
+  margin-top: 130px;
+}
+.section_hor {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.section_hor .section__body {
+  flex: 0 1 720px;
+}
+@media screen and (max-width: 991.98px) {
+  .section_hor .section__body {
+    flex: unset;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  .section_hor {
+    flex-direction: column;
+    gap: 32px;
+  }
+}
 .h1 {
   font-weight: 600;
   font-size: clamp(32px, 6.4vw, 64px);
@@ -536,6 +563,14 @@ button {
   background: linear-gradient(89.13deg, #3E68AA -13.87%, #A2BCDB 66.23%, #3E68AA 154.77%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.h2 {
+  font-size: clamp(24px, 4vw, 40px);
+  font-weight: 600;
+}
+.h2 span {
+  color: #3E68AA;
 }
 
 .text {
@@ -924,6 +959,45 @@ button {
 @media screen and (max-width: 991.98px) {
   .hero__content {
     flex: unset;
+  }
+}
+
+.advantages {
+  counter-reset: item;
+  margin-top: -16px;
+}
+.advantages li {
+  counter-increment: item;
+  display: flex;
+  justify-content: space-between;
+  text-align: right;
+  gap: 20px;
+  font-size: 20px;
+  line-height: 1.1;
+  padding-bottom: 16px;
+  padding-top: 16px;
+  border-bottom: 1px solid #3E68AA;
+}
+.advantages li:last-child {
+  border-bottom: none;
+}
+.advantages li b, .advantages li strong {
+  font-weight: 600;
+}
+.advantages li::before {
+  content: counter(item, decimal-leading-zero);
+  margin-right: auto;
+  font-weight: 600;
+  color: #3E68AA;
+}
+@media screen and (max-width: 575.98px) {
+  .advantages li {
+    justify-content: flex-start;
+    text-align: left;
+  }
+  .advantages li::before {
+    margin-right: 0;
+    flex: 0 0 20%;
   }
 }
 

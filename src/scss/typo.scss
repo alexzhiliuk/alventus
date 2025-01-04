@@ -9,6 +9,15 @@
     }
 }
 
+.h2 {
+    font-size: clamp(24px, 4vw, 40px);
+    font-weight: 600;
+
+    span {
+        color: $colorMain;
+    }
+}
+
 .text {
     font-size: clamp(16px, 3.2vw, 32px);
     line-height: 1.1;

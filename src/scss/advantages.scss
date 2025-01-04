@@ -1,0 +1,43 @@
+.advantages {
+    counter-reset: item;
+    margin-top: -16px;
+
+    li {
+        counter-increment: item;
+        display: flex;
+        justify-content: space-between;
+        text-align: right;
+        gap: 20px;
+        font-size: 20px;
+        line-height: 1.1;
+
+        padding-bottom: 16px;
+        padding-top: 16px;
+        border-bottom: 1px solid $colorMain;
+
+        &:last-child {
+            border-bottom: none;
+        }
+        
+        b, strong {
+            font-weight: 600;
+        }
+
+        &::before {
+            content: counter(item, decimal-leading-zero);
+            margin-right: auto;
+            font-weight: 600;
+            color: $colorMain;
+        }
+
+        @media screen and (max-width: $breakpoint576) {
+            justify-content: flex-start;
+            text-align: left;
+
+            &::before {
+                margin-right: 0;
+                flex: 0 0 20%;
+            }
+        }
+    }
+}

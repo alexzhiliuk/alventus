@@ -68,6 +68,11 @@ button {
     overflow-x: hidden;
 }
 
+.lock-clip {
+    overflow-y: clip;
+    overflow-x: clip;
+}
+
 .btn {
     padding: 15px 20px;
     border-radius: 100px;
@@ -82,4 +87,34 @@ button {
     line-height: 1.1;
 
     text-wrap: nowrap;
+}
+
+.section {
+
+    margin-top: 130px;
+
+    // .section_hor
+    &_hor {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+
+        .section__body {
+            flex: 0 1 720px;
+
+            @media screen and (max-width: $breakpoint992) {
+                flex: unset;
+            }
+        }
+
+        @media screen and (max-width: $breakpoint992) {
+            flex-direction: column;
+            gap: 32px;
+        }
+    }
+
+    // .section__body
+
+    &__body {
+    }
 }
