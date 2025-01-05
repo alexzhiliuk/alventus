@@ -1,0 +1,15 @@
+.certificates {
+    @media screen and (max-width: $breakpoint992) {
+        width: 100vw !important;
+        margin: 0 calc(-1 * (100vw - 100%) / 2) !important;
+        padding: 0 10px !important;
+    }
+    .swiper-slide {
+        max-width: clamp(184px, 30vw, 293px) !important;
+        img {
+            width: 100%;
+            max-width: clamp(184px, 30vw, 293px);
+            display: block;
+        }
+    }
+}
