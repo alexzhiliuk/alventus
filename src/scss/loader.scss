@@ -19,7 +19,7 @@
     justify-content: center;
 
     img {
-        height: 75px;
+        height: clamp(50px, 10vw, 75px);
     }
 
     // .loader__spinner
