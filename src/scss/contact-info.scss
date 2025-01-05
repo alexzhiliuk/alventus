@@ -1,0 +1,52 @@
+.contact-info {
+
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    // .contact-info__items
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+        gap: clamp(32px, 5.2vw, 52px);
+
+        font-size: clamp(14px, 1.8vw, 18px);
+    }
+
+    // .contact-info__item
+    &__item {
+        flex: 0 1 271px;
+    }
+
+    // .contact-info__item-title
+    &__item-title {
+        margin-bottom: 1em;
+    }
+
+    // .contact-info__item-list
+    &__item-list {
+        * {
+            color: $colorGray;
+        }
+
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        a {
+            &:hover {
+                color: $colorMain;
+            }
+        }
+    }
+
+    // .contact-info__mail
+    &__mail {
+        font-size: clamp(36px, 8vw, 80px);
+        font-weight: 600;
+
+        &:hover {
+            color: $colorMain;
+        }
+    }
+}
