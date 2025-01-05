@@ -22,6 +22,7 @@ $headerBg: rgba(232, 232, 232, 0.7);
     @media screen and (max-width: $burgerBreakpoint) {
         background: $headerBg;
         backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
 
         &_open {
             height: 100dvh;
