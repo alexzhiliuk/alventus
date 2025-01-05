@@ -1,0 +1,123 @@
+.production {
+    &__mobile {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        @media screen and (min-width: $breakpoint576) {
+            display: none;
+        }
+    }
+    &__swiper {
+        overflow: visible !important;
+        // width: 100vw;
+        // padding: 0 $containerPadding !important;
+        // margin: 0 calc(-1 * (100vw - 100%) / 2) !important;
+
+        @media screen and (max-width: $breakpoint576) {
+            display: none !important;
+        }
+
+        .swiper-slide {
+            @media screen and (min-width: $breakpoint576) {
+                width: 552px;
+            }
+        }
+    }
+
+    &__control {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        margin-top: clamp(16px, 3.2vw, 32px);
+    }
+
+    &__more {
+        font-size: clamp(14px, 2vw, 20px);
+        line-height: 1.1;
+        font-weight: 600;
+        text-decoration: underline;
+        color: $colorMain;
+    }
+
+    &__nav {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        @media screen and (max-width: $breakpoint576) {
+            display: none;
+        }
+
+        &-btn {
+            width: 34px;
+            height: 34px;
+            flex-shrink: 0;
+            border-radius: 50%;
+            background: $colorGray;
+            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &:hover {
+                background: $colorMain;
+            }
+            
+        }
+    }
+}
+
+.product-card {
+
+    background: linear-gradient(107.11deg, #3E68AA 0%, #A2BCDB 65.94%, #3E68AA 100%);
+    padding: 40px 32px 32px;
+    border-radius: 16px;
+    height: 260px;
+    width: 552px;
+
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @media screen and (max-width: $breakpoint576) {
+        width: 100%;
+        height: 170px;
+        padding: 22px;
+    }
+
+    * {
+        color: $colorWhite;
+        position: relative;
+        z-index: 1;
+    }
+
+    // .product-card__title
+    &__title {
+        font-size: clamp(16px, 5vw, 32px);
+        font-weight: 600;
+    }
+
+    &__btn {
+        max-width: max-content;
+    }
+
+    // .product-card__img
+    &__img {
+        position: absolute;
+        z-index: 0;
+        width: 280px;
+        height: auto;
+        bottom: 0;
+        right: 0;
+        translate: 20% 50%;
+
+        @media screen and (max-width: $breakpoint576) {
+            width: 180px;
+        }
+    }
+}
