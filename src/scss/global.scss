@@ -97,6 +97,15 @@ button {
     &_600 {
         font-weight: 600;
     }
+
+    &_main {
+
+        background: $colorMain;
+        box-shadow: 0px 4px 50px rgba(62, 104, 170, 0.4);
+        color: $colorWhite;
+        border: none;
+
+    }
 }
 
 .section {

@@ -1,0 +1,37 @@
+<section class="section contact-form">
+    <form class="contact-form__container container">
+        <div class="contact-form__header">
+            <h2 class="h1 contact-form__title"><span>У вас есть какие-нибудь вопросы?</span> — оставьте заявку, мы свяжемся с вами</h2>
+            <p class="contact-form__text text">Позвоните нам или попросите перезвонить. Мы незамедлительно ответим вам!</p>
+        </div>
+        <div class="contact-form__inputs">
+            <input type="text" class="contact-form__input" placeholder="Имя*" required>
+            <input type="tel" class="contact-form__input" placeholder="Телефон" data-tel-by-input="">
+            <input type="email" class="contact-form__input" placeholder="Email*" required>
+            <input type="text" class="contact-form__input" placeholder="Введите сообщение">
+            <label class="contact-form__confirm">
+                <input type="checkbox" class="contact-form__checkbox" required>
+                <p>
+                    Я принимаю условия <a href="#">политики конфиденциальности</a>
+                </p>
+            </label>
+        </div>
+        <div class="contact-form__footer">
+            <button type="submit" class="btn btn_main btn_up btn_600 contact-form__submit">
+                Оставить заявку
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11.4853 10.7431C11.4853 11.2954 11.0376 11.7431 10.4853 11.7431L1.48528 11.7431C0.932997 11.7431 0.485281 11.2954 0.485281 10.7431C0.485281 10.1908 0.932997 9.74309 1.48528 9.74309L9.48528 9.74309L9.48528 1.74309C9.48528 1.19081 9.933 0.743094 10.4853 0.743094C11.0376 0.743094 11.4853 1.19081 11.4853 1.74309L11.4853 10.7431ZM2.70711 1.55071L11.1924 10.036L9.77817 11.4502L1.29289 2.96492L2.70711 1.55071Z" fill="white"/>
+                </svg>                
+            </button>
+            <div class="contact-form__team short-team">
+                <div class="short-team__avatars">
+                    <img src="@img/team/avatar1.png" alt="">
+                    <img src="@img/team/avatar2.png" alt="">
+                    <img src="@img/team/avatar3.png" alt="">
+                </div>
+                Наша команда профессионалов
+                <br>всегда рада помочь!
+            </div>
+        </div>
+    </form>
+</section>

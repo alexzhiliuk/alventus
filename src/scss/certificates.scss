@@ -5,7 +5,9 @@
         padding: 0 10px !important;
     }
     .swiper-slide {
-        max-width: clamp(184px, 30vw, 293px) !important;
+        @media screen and (max-width: $breakpoint992) {
+            max-width: clamp(184px, 30vw, 293px) !important;
+        }
         img {
             width: 100%;
             max-width: clamp(184px, 30vw, 293px);
