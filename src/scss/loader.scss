@@ -1,0 +1,29 @@
+@keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg); 
+    }
+}
+
+.loader {
+
+    position: fixed;
+    z-index: $loaderLayer;
+    inset: 0;
+    background: $colorWhite;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+        height: 75px;
+    }
+
+    // .loader__spinner
+    &__spinner {
+        animation: spin 2s linear infinite;
+    }
+}

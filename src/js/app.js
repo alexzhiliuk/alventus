@@ -10,3 +10,8 @@ import * as certificates from './modules/certificates.js'
 
 // flsFunctions.isWebp()
 
+$(window).on('load', function () {
+    $('#loader').fadeOut('slow', function () {
+    //   $('#content').fadeIn('slow');
+    });
+});
