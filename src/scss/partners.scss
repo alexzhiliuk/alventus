@@ -1,0 +1,80 @@
+@keyframes scroll {
+    to {
+        transform: translate(calc(-50% - 30px));
+    }
+}
+
+.companies-slider {
+
+    width: 100vw;
+    margin: 0 calc(-1 * (100vw - 100%) / 2);
+    height: 122px;
+    overflow: hidden;
+
+    @media screen and (max-width: $breakpoint576) {
+        height: unset;
+        width: 100%;
+        margin: 0;
+    }
+    
+
+    // .companies-slider__list
+    &__list {
+        width: max-content;
+        display: flex;
+        height: 100%;
+        gap: 60px;
+        align-items: center;
+
+        @media screen and (min-width: $breakpoint576) {
+            animation: scroll var(--speed) linear infinite;
+        }
+        @media screen and (max-width: $breakpoint576) {
+            flex-direction: column;
+            width: 100%;
+            height: unset;
+            gap: 0;
+        }
+
+        li {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            padding-right: 60px;
+
+            @media screen and (max-width: $breakpoint576) {
+                border-bottom: 1px solid #EAEAEA;
+                height: unset;
+                width: 100%;
+                padding: 32px 0;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                right: 0;
+                top: 50%;
+                translate: 0 -50%;
+                height: 65%;
+                width: 1px;
+                background: #EAEAEA;
+
+                @media screen and (max-width: $breakpoint576) {
+                    display: none;
+                }
+            }
+        }
+
+        img {
+            display: block;
+            max-height: 100%;
+            max-width: 100%;
+            height: auto;
+            width: auto;
+
+        }
+    }
+
+}
