@@ -93,6 +93,10 @@ $headerBg: rgba(232, 232, 232, 0.7);
         a {
             font-size: clamp(16px, 1.3vw, 18px);
             line-height: 1.55;
+
+            &:hover {
+                color: $colorMain;
+            }
         }
     }
 
@@ -104,9 +108,19 @@ $headerBg: rgba(232, 232, 232, 0.7);
             pointer-events: none;
             left: 0;
             top: calc(100% + 10px);
+
+            &::before {
+                content: '';
+                bottom: 100%;
+                left: 0;
+                right: 0;
+                height: 10px;
+                position: absolute;
+            }
         }
 
-        &_open {
+        &_open,
+        &:hover {
             .dropmenu {
                 opacity: 1;
                 pointer-events: all;
@@ -132,6 +146,12 @@ $headerBg: rgba(232, 232, 232, 0.7);
             display: block;
             height: 18px;
             width: auto;
+
+            &:hover {
+                *[fill="#999999"] {
+                    fill: $colorMain;
+                }
+            }
         }
     }
 

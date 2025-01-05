@@ -23,7 +23,7 @@
         width: max-content;
         display: flex;
         height: 100%;
-        gap: 60px;
+        // gap: 60px;
         align-items: center;
 
         @media screen and (min-width: $breakpoint576) {
@@ -42,7 +42,7 @@
             align-items: center;
             justify-content: center;
             position: relative;
-            padding-right: 60px;
+            // padding-right: 60px;
 
             @media screen and (max-width: $breakpoint576) {
                 border-bottom: 1px solid #EAEAEA;
