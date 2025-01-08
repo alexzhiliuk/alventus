@@ -17,6 +17,7 @@ $colorWhite: #FFFFFF;
 $colorBlack: #202020;
 $colorMain: #3E68AA;
 $colorGray: #999999;
+$colorStroke: #EAEAEA;
 $colorGradient: linear-gradient(89.13deg, #3E68AA -13.87%, #A2BCDB 66.23%, #3E68AA 154.77%);
 
 
@@ -24,6 +25,7 @@ $colorGradient: linear-gradient(89.13deg, #3E68AA -13.87%, #A2BCDB 66.23%, #3E68
 $fontPrimary: TTFirsNeue;
 
 // Layers
+$fixedLayer: 7;
 $headerLayer: 9;
 $popupLayer: 10;
 $loaderLayer: 999;

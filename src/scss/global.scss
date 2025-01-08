@@ -46,7 +46,11 @@ body {
 }
 
 main {
-    
+    .section {
+        &:first-child {
+            margin-top: clamp(50px, 8vw, 80px);
+        }
+    }
 }
 
 ul, ol {
@@ -111,6 +115,34 @@ button {
         }
 
     }
+}
+
+.slider-btn {
+    width: 34px;
+    height: 34px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: $colorGray;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media screen and (max-width: $breakpoint768) {
+        scale: 0.7;
+    }
+
+    &:hover {
+        background: $colorMain;
+    }
+
+    &_white {
+        background: $colorWhite;
+    }
+}
+
+.mt-130 {
+    margin-top: clamp(60px, 13vw, 130px);
 }
 
 .section {

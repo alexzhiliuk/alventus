@@ -1,0 +1,12 @@
+.chat {
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    z-index: $fixedLayer;
+
+    img {
+        display: block;
+        width: 72px;
+        height: auto;
+    }
+}

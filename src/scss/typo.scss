@@ -22,3 +22,13 @@
     font-size: clamp(16px, 3.2vw, 32px);
     line-height: 1.1;
 }
+
+.title {
+    font-size: clamp(20px, 4vw, 40px);
+    font-weight: 600;
+    line-height: 1.1;
+    text-align: center;
+    background: $colorGradient;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

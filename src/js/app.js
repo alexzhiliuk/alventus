@@ -7,11 +7,15 @@ import * as dropmenu from './modules/dropmenu.js'
 import * as production from './modules/production.js'
 import * as companiesSlider from './modules/companiesSlider.js'
 import * as certificates from './modules/certificates.js'
+import * as product from './modules/product.js'
+import * as tabs from './modules/tabs.js'
 
 // flsFunctions.isWebp()
 
 $(window).on('load', function () {
-    $('#loader').fadeOut('slow', function () {
-    //   $('#content').fadeIn('slow');
-    });
+    $('#loader').fadeOut('slow');
 });
+
+// setTimeout(function () {
+//     $('#loader').fadeOut('slow');
+// }, 3000);
