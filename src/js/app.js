@@ -16,6 +16,6 @@ $(window).on('load', function () {
     $('#loader').fadeOut('slow');
 });
 
-// setTimeout(function () {
-//     $('#loader').fadeOut('slow');
-// }, 3000);
+setTimeout(function () {
+    $('#loader').fadeOut('slow');
+}, 5000);
