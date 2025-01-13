@@ -509,6 +509,10 @@ a {
   color: inherit;
 }
 
+b, strong {
+  font-weight: 600;
+}
+
 button {
   cursor: pointer;
   background: none;
@@ -2020,12 +2024,12 @@ button {
   content: " (" attr(data-count) ")";
 }
 
-.logistics {
+.logistics, .about {
   display: flex;
   flex-direction: column;
   gap: clamp(32px, 5.2vw, 52px);
 }
-.logistics__header .text {
+.logistics__header .text, .about__header .text {
   margin-top: 1em;
 }
 .logistics__list {
@@ -2123,6 +2127,278 @@ button {
   object-fit: cover;
   display: block;
   z-index: -1;
+}
+
+.about__item .text span {
+  background: linear-gradient(89.13deg, #3E68AA -13.87%, #A2BCDB 66.23%, #3E68AA 154.77%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+}
+.about__title {
+  margin-bottom: 14px;
+  font-size: clamp(14px, 2vw, 20px);
+  color: #999999;
+  line-height: 1.1;
+  font-weight: 400;
+}
+
+.about-banner {
+  background: #202020;
+  padding: 32px;
+  width: 100vw;
+  margin: 0 calc(-1 * (100vw - 100%) / 2);
+  padding-bottom: clamp(150px, 15vw, 220px);
+  position: relative;
+}
+.about-banner * {
+  color: #FFFFFF;
+}
+.about-banner__title {
+  background: linear-gradient(89.13deg, #3E68AA -13.87%, #A2BCDB 66.23%, #3E68AA 154.77%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: clamp(50px, 20vw, 300px);
+  text-align: center;
+  font-weight: 500;
+}
+.about-banner__overlap {
+  width: 100vw;
+  margin: 0 calc(-1 * (100vw - 100%) / 2);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  min-height: 63%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 32px 10px;
+  background: rgba(32, 32, 32, 0.7);
+  backdrop-filter: blur(clamp(3.5px, 1vw, 11px));
+  -webkit-backdrop-filter: blur(clamp(3.5px, 1vw, 11px));
+}
+@media screen and (max-width: 575.98px) {
+  .about-banner__overlap {
+    min-height: 70%;
+    justify-content: center;
+  }
+}
+.about-banner__slogan {
+  font-size: clamp(16px, 4vw, 40px);
+  text-align: center;
+  font-weight: 500;
+  max-width: 838px;
+  margin: 0 auto;
+}
+.about-banner__slogan span {
+  background: linear-gradient(89.13deg, #3E68AA -13.87%, #A2BCDB 66.23%, #3E68AA 154.77%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.about-banner__caption {
+  font-size: clamp(14px, 3.2vw, 32px);
+  text-align: center;
+  font-weight: 400;
+  max-width: 838px;
+  margin: 0 auto;
+  margin-top: 32px;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 991.98px) {
+  .about-banner__caption {
+    margin-bottom: 0;
+  }
+}
+
+.team__desc {
+  margin-top: 1em;
+}
+.team__people {
+  margin-top: clamp(32px, 5.2vw, 52px);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.team__people > * {
+  flex: 0 0 calc(33.3333333333% - 10.6666666667px);
+}
+@media screen and (max-width: 991.98px) {
+  .team__people {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .team__people > * {
+    flex: 0 0 calc(50% - 5px);
+  }
+}
+@media screen and (max-width: 575.98px) {
+  .team__people {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+  .team__people > * {
+    flex: 0 0 calc(100% - 0px);
+  }
+}
+.person {
+  position: relative;
+  height: 578px;
+  border-radius: 16px;
+  overflow: hidden;
+  padding: 32px 32px 52px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+@media screen and (max-width: 991.98px) {
+  .person {
+    aspect-ratio: 1/1;
+    height: unset;
+    padding: 24px;
+  }
+  .person .person__img {
+    filter: grayscale(0);
+    -webkit-filter: grayscale(0);
+    scale: 1;
+    transform-origin: center top;
+  }
+  .person::after {
+    display: none;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  .person {
+    aspect-ratio: 300/304;
+  }
+}
+.person * {
+  color: #FFFFFF;
+  position: relative;
+  z-index: 2;
+}
+.person::before {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  left: 50%;
+  top: 100%;
+  translate: -50% -36%;
+  width: 268%;
+  height: 86%;
+  z-index: 0;
+  background: #202020;
+  filter: blur(100px);
+  -webkit-filter: blur(100px);
+}
+.person::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 150%;
+  translate: -100%;
+  z-index: 1;
+  height: 120%;
+  width: 5px;
+  background: #FFFFFF;
+  filter: blur(17.4px);
+  transform: rotate(33deg);
+}
+.person:hover .person__img {
+  filter: grayscale(0);
+  -webkit-filter: grayscale(0);
+  scale: 1.2;
+  transform-origin: center top;
+}
+.person:hover .person__contacts {
+  border-color: #3E68AA;
+}
+.person:hover::after {
+  right: -50%;
+}
+.person__img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  z-index: -1;
+  filter: grayscale(1);
+  -webkit-filter: grayscale(1);
+  transform-origin: center top;
+}
+@media screen and (max-width: 991.98px) {
+  .person__img {
+    object-position: center top;
+  }
+}
+.person__hint {
+  position: absolute;
+  z-index: 3;
+  top: 32px;
+  right: 32px;
+  left: 32px;
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
+}
+.person__hint:hover .person__hint-text {
+  opacity: 1;
+}
+@media screen and (max-width: 991.98px) {
+  .person__hint {
+    top: 20px;
+    right: 20px;
+    left: 20px;
+  }
+}
+.person__hint-icon {
+  width: 20px;
+}
+.person__hint-icon img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.person__hint-text {
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: clamp(12px, 1.4vw, 14px);
+  color: #FFFFFF;
+  padding: 20px;
+  border-radius: 16px;
+  background: rgba(32, 32, 32, 0.7);
+  width: calc(100% - 20px - 8px);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+.person__name {
+  font-size: clamp(20px, 3.2vw, 32px);
+  font-size: clamp(20px, 2.6vw, 32px);
+}
+.person__position {
+  font-size: clamp(12px, 1.8vw, 18px);
+  color: #999999;
+  margin-top: 0.5em;
+}
+.person__contacts {
+  display: flex;
+  flex-direction: column;
+  padding: 2px 12px;
+  padding-right: 0;
+  border-left: 1px solid #FFFFFF;
+  gap: clamp(6px, 1.2vw, 12px);
+  margin-top: clamp(14px, 2vw, 20px);
+}
+.person__contacts a {
+  font-size: clamp(12px, 1.6vw, 16px);
 }
 
 @font-face {

@@ -1,0 +1,330 @@
+.about {
+
+    @extend .logistics;
+
+    // .about__item
+    &__item {
+        .text {
+            span {
+                @include gradientText();
+                font-weight: 600;
+            }
+        }
+    }
+
+    // .about__header
+    &__header {
+        @extend .logistics__header;
+    }
+
+    // .about__title
+    &__title {
+        margin-bottom: 14px;
+        font-size: clamp(14px, 2vw, 20px);
+        color: $colorGray;
+        line-height: 1.1;
+        font-weight: 400;
+    }
+}
+
+.about-banner {
+
+    background: $colorBlack;
+    padding: 32px;
+    width: 100vw;
+    margin: 0 calc(-1 * (100vw - 100%) / 2);
+    padding-bottom: clamp(150px, 15vw, 220px);
+    position: relative;
+
+    * {
+        color: $colorWhite;
+    }
+
+    // .about-banner__title
+    &__title {
+        @include gradientText;
+        font-size: clamp(50px, 20vw, 300px);
+        text-align: center;
+        font-weight: 500;
+    }
+
+    // .about-banner__overlap
+    &__overlap {
+        width: 100vw;
+        margin: 0 calc(-1 * (100vw - 100%) / 2);
+
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        min-height: 63%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 32px 10px;
+        background: rgba($colorBlack, 0.7);
+        backdrop-filter: blur(clamp(3.5px, 1vw, 11px));
+        -webkit-backdrop-filter: blur(clamp(3.5px, 1vw, 11px));
+        
+
+        @media screen and (max-width: $breakpoint576) {
+            min-height: 70%;
+            justify-content: center;
+        }
+
+    }
+
+    // .about-banner__slogan
+    &__slogan {
+        font-size: clamp(16px, 4vw, 40px);
+        text-align: center;
+        font-weight: 500;
+        max-width: 838px;
+        margin: 0 auto;
+
+        span {
+            @include gradientText;
+        }
+    }
+
+    // .about-banner__caption
+    &__caption {
+        font-size: clamp(14px, 3.2vw, 32px);
+        text-align: center;
+        font-weight: 400;
+        max-width: 838px;
+        margin: 0 auto;
+        margin-top: 32px;
+        margin-bottom: 20px;
+
+        @media screen and (max-width: $breakpoint992) {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.team {
+
+    // .team__title
+    &__title {
+    }
+
+    // .team__desc
+    &__desc {
+        margin-top: 1em;
+    }
+
+    // .team__people
+    &__people {
+        // margin-top: clamp(32px, 5.2vw, 52px);
+        @include clamp(margin-top, 32, 52);
+        @include flexColumns(3, 16px);
+
+        @media screen and (max-width: $breakpoint992) {
+            @include flexColumns(2, 10px);
+        }
+        @media screen and (max-width: $breakpoint576) {
+            @include flexColumns(1, 14px);
+        }
+    }
+
+    // .team__person
+    &__person {
+        
+    }
+}
+
+.person {
+
+    position: relative;
+    height: 578px;
+    border-radius: 16px;
+    overflow: hidden;
+    padding: 32px 32px 52px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    @media screen and (max-width: $breakpoint992) {
+        aspect-ratio: 1 / 1;
+        height: unset;
+        padding: 24px;
+
+        .person__img {
+            filter: grayscale(0);
+            -webkit-filter: grayscale(0);
+            scale: 1;
+            transform-origin: center top;
+        }
+
+        &::after {
+            display: none;
+        }
+    }
+
+    @media screen and (max-width: $breakpoint576) {
+        aspect-ratio: 300 / 304;
+    }
+
+    * {
+        color: $colorWhite;
+        position: relative;
+        z-index: 2;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        pointer-events: none;
+        left: 50%;
+        top: 100%;
+        translate: -50% -36%;
+        width: 268%;
+        height: 86%;
+        z-index: 0;
+
+
+        background: $colorBlack;
+        filter: blur(100px);
+        -webkit-filter: blur(100px);
+
+    }
+
+    &::after {
+        content: '';
+
+        position: absolute;
+        top: 0;
+        right: 150%;
+        translate: -100%;
+        z-index: 1;
+
+        height: 120%;
+        width: 5px;
+        background: $colorWhite;
+        filter: blur(17.4px);
+        transform: rotate(33deg);
+
+    }
+
+    &:hover {
+        .person__img {
+            filter: grayscale(0);
+            -webkit-filter: grayscale(0);
+            scale: 1.2;
+            transform-origin: center top;
+        }
+
+        .person__contacts {
+            border-color: $colorMain;
+        }
+
+        &::after {
+            right: -50%;
+        }
+    }
+
+    // .person__img
+    &__img {
+        position: absolute;
+        left: 0; top: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        z-index: -1;
+        
+        filter: grayscale(1);
+        -webkit-filter: grayscale(1);
+        transform-origin: center top;
+
+        @media screen and (max-width: $breakpoint992) {
+            object-position: center top;
+        }
+    }
+
+    // .person__hint
+    &__hint {
+        position: absolute;
+        z-index: 3;
+        top: 32px;
+        right: 32px;
+        left: 32px;
+        display: flex;
+        justify-content: flex-end;
+        cursor: pointer;
+
+        &:hover {
+            .person__hint-text {
+                opacity: 1;
+            }
+        }
+
+        @media screen and (max-width: $breakpoint992) {
+            top: 20px;
+            right: 20px;
+            left: 20px;
+        }
+    }
+
+    // .person__hint-icon
+    &__hint-icon {
+        width: 20px;
+
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    }
+
+    // .person__hint-text
+    &__hint-text {
+        opacity: 0;
+        pointer-events: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include clamp(font-size, 12, 14);
+        color: $colorWhite;
+
+        padding: 20px;
+        border-radius: 16px;
+        background: rgba($colorBlack, 0.7);
+        width: calc(100% - 20px - 8px);
+
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+
+    }
+
+    // .person__name
+    &__name {
+        @include clamp(font-size, 20, 32);
+        font-size: clamp(20px, 2.6vw, 32px);
+    }
+
+    // .person__position
+    &__position {
+        @include clamp(font-size, 12, 18);
+        color: $colorGray;
+        margin-top: 0.5em;
+    }
+
+    // .person__contacts
+    &__contacts {
+        display: flex;
+        flex-direction: column;
+        padding: 2px 12px;
+        padding-right: 0;
+        border-left: 1px solid $colorWhite;
+
+        @include clamp(gap, 6, 12);
+        @include clamp(margin-top, 14, 20);
+
+        a {
+            @include clamp(font-size, 12, 16);
+        }
+    }
+}

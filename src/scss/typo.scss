@@ -1,11 +1,15 @@
+@mixin gradientText {
+    background: $colorGradient;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 .h1 {
     font-weight: 600;
     font-size: clamp(32px, 6.4vw, 64px);
 
     span {
-        background: $colorGradient;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        @include gradientText();
     }
 }
 

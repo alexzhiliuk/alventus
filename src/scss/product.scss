@@ -3,7 +3,7 @@
 }
 
 @mixin clamp-font($min, $max) {
-    $dynamic: $max / 10; 
+    $dynamic: calc($max / 10); 
     font-size: clamp(#{$min}px, #{$dynamic}vw, #{$max}px);
 }
   
