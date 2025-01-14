@@ -133,7 +133,8 @@ button {
     justify-content: center;
 
     @media screen and (max-width: $breakpoint768) {
-        scale: 0.7;
+        width: 24px;
+        height: 24px;
     }
 
     &:hover {

@@ -9,6 +9,7 @@ import * as companiesSlider from './modules/companiesSlider.js'
 import * as certificates from './modules/certificates.js'
 import * as product from './modules/product.js'
 import * as tabs from './modules/tabs.js'
+import * as news from './modules/news.js'
 
 // flsFunctions.isWebp()
 
