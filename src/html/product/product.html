@@ -1,39 +1,62 @@
 <section class="section container">
     @@include('breadcrumbs.html')
-    <div class="product">
-        <h1 class="h1 product__title"><span>Строительная химия</span></h1>
-        <div class="product__tabs tabs">
-            <div class="tabs__container draggable">
-                <a href="#" class="tabs__tab" data-count="2">Строительные волокна</a>
-                <a href="#" class="tabs__tab tabs__tab_active" data-count="4">Продукция на основе базальта</a>
-                <a href="#" class="tabs__tab" data-count="3">Продукция на основе мрамора</a>
-            </div>
-        </div>
-        <div class="product__content mt-130">
-            <aside class="product__sidebar product-filter">
-                <div class="product-filter__title">Фильтр</div>
-                <ul class="product-filter__items">
-                    <li class="product-filter__item">
-                        <a href="#">Базальтовый ровен</a>
+    <div class="catalog">
+        <h1 class="h1 catalo__title"><span>Строительная химия</span></h1>
+        <div class="catalog__content">
+            <aside class="catalog__sidebar catalog-sidebar">
+                <div class="catalog-sidebar__nav">
+                    <ul class="catalog-sidebar__back">
+                        <li>
+                            <a href="catalog.html">
+                                <img src="@img/catalog/back-arrow.svg" alt="">
+                                Каталог
+                            </a>
+                        </li>
+                        <li>
+                            <ul class="catalog-sidebar__back">
+                                <li>
+                                    <a href="catalog.html">
+                                        <img src="@img/catalog/back-arrow.svg" alt="">
+                                        Строительная химия
+                                    </a>
+                                </li>
+                                <li>
+                                    <ul>
+                                        <li>
+                                            Продукция на основе  базальта
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <a href="#" class="catalog-sidebar__back-mobile">
+                        <img src="@img/catalog/back-arrow.svg" alt="">
+                        Строительная химия
+                    </a>
+                </div>
+                <ul class="catalog-sidebar__items">
+                    <li class="catalog-sidebar__item">
+                        <a href="product.html">Базальтовый ровен</a>
                     </li>
-                    <li class="product-filter__item">
-                        <a href="#">Базальтовая фибра</a>
+                    <li class="catalog-sidebar__item">
+                        <a href="product.html">Базальтовая фибра</a>
                     </li>
-                    <li class="product-filter__item">
-                        <a href="#">Базальтовая арматура</a>
+                    <li class="catalog-sidebar__item">
+                        <a href="product.html">Базальтовая арматура</a>
                     </li>
-                    <li class="product-filter__item product-filter__item_active">
-                        <a href="javascript:void(0)">Базальтовая вата</a>
+                    <li class="catalog-sidebar__item catalog-filter__item_active">
+                        <a href="product.html">Базальтовая вата</a>
                     </li>
                 </ul>
-                <a href="#" class="product-filter__btn btn btn_main btn_up btn_600">
+                <a href="#" class="catalog-sidebar__btn btn btn_main btn_up btn_600">
                     Оставить заявку
                     <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M11.4853 10.7431C11.4853 11.2954 11.0376 11.7431 10.4853 11.7431L1.48528 11.7431C0.932997 11.7431 0.485281 11.2954 0.485281 10.7431C0.485281 10.1908 0.932997 9.74309 1.48528 9.74309L9.48528 9.74309L9.48528 1.74309C9.48528 1.19081 9.933 0.743094 10.4853 0.743094C11.0376 0.743094 11.4853 1.19081 11.4853 1.74309L11.4853 10.7431ZM2.70711 1.55071L11.1924 10.036L9.77817 11.4502L1.29289 2.96492L2.70711 1.55071Z" fill="white"/>
                     </svg>
                 </a>
             </aside>
-            <div class="product__body product-article">
+            <div class="catalog__body product-article">
                 <div class="product-article__gallery product-gallery">
                     <div class="swiper product-gallery__slider" id="productGallery">
                         <div class="swiper-wrapper">
