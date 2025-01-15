@@ -3,16 +3,26 @@
     <div class="section__body">
         <div class="certificates swiper">
             <div class="swiper-wrapper">
-                <div class="swiper-slide">
+                <a href="@img/certificates/certificate1.png" class="swiper-slide">
                     <img src="@img/certificates/certificate1.png" alt="">
-                </div>
-                <div class="swiper-slide">
+                </a>
+                <a href="@img/certificates/certificate2.png" class="swiper-slide">
                     <img src="@img/certificates/certificate2.png" alt="">
-                </div>
-                <div class="swiper-slide">
+                </a>
+                <a href="@img/certificates/certificate3.png" class="swiper-slide">
                     <img src="@img/certificates/certificate3.png" alt="">
-                </div>
+                </a>
             </div>
         </div>
     </div>
 </section>
+<script>
+    $('.certificates').magnificPopup({
+      delegate: 'a', // Ссылка на изображение
+      type: 'image', // Тип контента
+      gallery: {
+        enabled: true // Включить галерею
+      },
+      titleSrc: 'alt' // Подпись будет взята из атрибута alt
+    });
+</script>
