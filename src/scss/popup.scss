@@ -24,6 +24,7 @@
         margin-bottom: auto;
         max-width: 944px;
         width: 100%;
+        border-radius: 16px;
 
         padding: clamp(20px, 4vw, 40px);
         display: flex;
@@ -40,6 +41,7 @@
     // .popup__title
     &__title {
         margin-top: 10px;
+        text-align: center;
     }
 
     // .popup__inputs
@@ -81,7 +83,7 @@
         
         font-style: normal;
         font-weight: 400;
-        font-size: 14px;
+        @include clamp(font-size, 14, 16);
         line-height: 100%;
         letter-spacing: 0.2px;
 
@@ -94,6 +96,7 @@
             
             border: 2px solid $colorStroke;
             position: relative;
+            border-radius: 50%;
             
             &:checked {
 
@@ -102,7 +105,8 @@
                     position: absolute;
                     top: 2px; bottom: 2px;
                     left: 2px; right: 2px;
-                    background: $colorRed;
+                    background: $colorMain;
+                    border-radius: 50%;
                 }
             }
         }
@@ -111,6 +115,7 @@
     
     // .popup__btn
     &__btn {
+        @include clamp(font-size, 14, 20);
         margin-top: 50px;
         max-width: fit-content;
     }

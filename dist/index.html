@@ -11,22 +11,22 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap&_v=20250115211025" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap&_v=20250115212654" rel="stylesheet">
     
 
     <!-- CSS -->
-    <link rel="stylesheet" href="css/style.min.css?_v=20250115211025">
+    <link rel="stylesheet" href="css/style.min.css?_v=20250115212654">
 
     <link
       rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.min.css?_v=20250115211025"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css?_v=20250115212654"
     />
 
     <!-- JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js?_v=20250115211025"></script>
-    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js?_v=20250115211025"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js?_v=20250115212654"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js?_v=20250115212654"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js?_v=20250115211025"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js?_v=20250115212654"></script>
 
     <title>Главная</title>
 </head>
@@ -265,6 +265,25 @@
         </div>
     </div>
 </header>
+
+        <!-- Popup -->
+        <section class="popup" data-popup="1" style="display: none;">
+    <form class="popup__inner">
+        <div class="popup__close">
+            <img src="img/popup/close.svg" alt="">
+        </div>
+        <h2 class="popup__title h2">Получить дополнительную информацию</h2>
+        <div class="popup__inputs">
+            <input class="popup__input" type="text" placeholder="Ваше имя" required>
+            <input class="popup__input" type="email" placeholder="E-mail" required>
+            <label class="popup__confirm">
+                <input type="checkbox">
+                Я готов на обработку персональных данных
+            </label>
+        </div>
+        <button type="submit" class="btn btn_main btn_600 popup__btn">Оставить заявку</button>
+    </form>
+</section>
 
         <main>            
             <!-- Hero -->
@@ -587,6 +606,6 @@
     <img src="img/chat/icon.svg" alt="">
 </div>
 
-        <script src="js/app.min.js?_v=20250115211025"></script>
+        <script src="js/app.min.js?_v=20250115212654"></script>
     </body>
 </html>
