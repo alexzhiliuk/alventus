@@ -686,6 +686,9 @@ button {
   display: flex;
   flex-direction: column;
 }
+.header_fixed {
+  position: fixed;
+}
 @media screen and (max-width: 1199.98px) {
   .header {
     background: rgba(232, 232, 232, 0.7);
@@ -2860,6 +2863,12 @@ button {
   border-bottom: 1px solid #3E68AA;
   cursor: pointer;
 }
+.vacancy:first-child .vacancy__header {
+  padding-top: 0;
+}
+.vacancy:last-child {
+  border-bottom: 0;
+}
 .vacancy_open {
   padding-bottom: 16px;
 }
@@ -2998,6 +3007,51 @@ button {
   font-size: clamp(10px, 1.2vw, 12px);
   border-radius: 4px;
   background: #EEEEEE;
+}
+
+.section-404 {
+  background: url(../img/404/bg.png) center center/cover no-repeat;
+  height: clamp(530px, 91vw, 910px);
+  margin-bottom: calc(-1 * clamp(60px, 13vw, 130px));
+  padding: 90px 10px clamp(60px, 13vw, 130px);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.section-404 * {
+  color: #FFFFFF;
+}
+.section-404__oops {
+  font-size: clamp(48px, 9.6vw, 96px);
+  font-weight: 600;
+}
+.section-404__title {
+  font-size: clamp(16px, 3.6vw, 36px);
+  font-weight: 400;
+  margin-top: 14px;
+}
+.section-404__nav {
+  margin-top: clamp(14px, 5.2vw, 52px);
+}
+.section-404__nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+@media screen and (max-width: 575.98px) {
+  .section-404__nav ul li:not(:first-of-type) {
+    display: none;
+  }
+}
+.section-404__nav ul a {
+  font-size: clamp(14px, 2vw, 20px);
+  text-decoration: underline;
+  font-weight: 600;
+}
+.section-404__nav ul a:hover {
+  color: #3E68AA;
 }
 
 @font-face {

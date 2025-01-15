@@ -1,0 +1,56 @@
+.section-404 {
+    background: url(../img/404/bg.png) center center / cover no-repeat;
+
+    height: clamp(530px, 91vw, 910px);
+    margin-bottom: calc(-1 * clamp(60px, 13vw, 130px));
+    padding: 90px 10px clamp(60px, 13vw, 130px);
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    * {
+        color: $colorWhite;
+    }
+
+    &__oops {
+        @include clamp(font-size, 48, 96);
+        font-weight: 600;
+    }
+
+    &__title {
+        @include clamp(font-size, 16, 36);
+        font-weight: 400;
+        margin-top: 14px;
+    }
+
+    &__nav {
+        margin-top: clamp(14px, 5.2vw, 52px);
+
+        ul {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+
+            li {
+                &:not(:first-of-type) {
+                    @media screen and (max-width: $breakpoint576) {
+                        display: none;
+                    }
+                }
+            }
+
+            a {
+                @include clamp(font-size, 14, 20);
+                text-decoration: underline;
+                font-weight: 600;
+
+                &:hover {
+                    color: $colorMain;
+                }
+            }
+        }
+    }
+}

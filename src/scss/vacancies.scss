@@ -52,6 +52,15 @@
     border-bottom: 1px solid $colorMain;
     cursor: pointer;
 
+    &:first-child {
+        .vacancy__header {
+            padding-top: 0;
+        }
+    }
+    &:last-child {
+        border-bottom: 0;
+    }
+
     &_open {
         padding-bottom: 16px;
         
