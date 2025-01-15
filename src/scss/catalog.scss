@@ -1,0 +1,112 @@
+
+.catalog {
+
+    // .catalog__title
+    &__title {
+    }
+
+    // .catalog__items
+    &__items {
+        @include clamp(margin-top, 32, 64);
+
+        display: flex;
+        flex-direction: column;
+        @include clamp(gap, 16, 40);
+    }
+
+    // .catalog__item
+    &__item {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    // .catalog__category
+    &__category {
+        background: linear-gradient(107.11deg, transparent, rgba(255, 255, 255, 0.7) 66%, transparent);
+        padding: 32px;
+        border-radius: 16px;
+        height: 190px;
+        width: 100%;
+
+        position: relative;
+        overflow: hidden;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        * {
+            color: $colorWhite;
+            position: relative;
+            z-index: 1;
+        }
+        
+        &:hover {
+            background-color: darken($color: $colorMain, $amount: 5) !important;
+            .catalog__category-img {
+                scale: 1.2;
+            }
+        }
+    }
+
+    // .catalog__category-title
+    &__category-title {
+        font-weight: 700;
+        @include clamp(font-size, 16, 24);
+
+        max-width: 687px;
+    }
+
+    // .catalog__category-btn
+    &__category-btn {
+        max-width: max-content;
+    }
+    
+    // .catalog__category-img
+    &__category-img {
+        position: absolute;
+        z-index: 0;
+        width: 280px;
+        height: auto;
+        bottom: 0;
+        right: 0;
+        translate: 20% 50%;
+
+        @media screen and (max-width: $breakpoint576) {
+            width: 180px;
+        }
+    }
+
+    // .catalog__subcategories
+    &__subcategories {
+        @include flexColumns(3, 8px);
+
+        @media screen and (max-width: $breakpoint768) {
+            @include flexColumns(2, 8px);
+        }
+
+        @media screen and (max-width: $breakpoint576) {
+            @include flexColumns(1, 8px);
+        }
+    }
+
+    // .catalog__subcategory
+    &__subcategory {
+        @include clamp(font-size, 12, 14);
+        color: $colorGray;
+        padding: 12px 32px;
+        padding-right: 12px;
+
+        border-radius: 12px;
+        background: #EBEBEB;
+
+        // @media screen and (max-width: $breakpoint768) {
+        //     padding: 12px;
+        // }
+
+        &:hover {
+            background: darken($color:  #EBEBEB, $amount: 7);
+        }
+    }
+}

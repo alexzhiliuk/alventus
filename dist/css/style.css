@@ -531,7 +531,7 @@ button {
 .btn {
   padding: 15px 20px;
   border-radius: 100px;
-  border: 1px solid #FFFFFF;
+  border: 2px solid #FFFFFF;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -688,6 +688,8 @@ button {
 }
 .header_fixed {
   position: fixed;
+  left: 50%;
+  translate: -50%;
 }
 @media screen and (max-width: 1199.98px) {
   .header {
@@ -3007,6 +3009,102 @@ button {
   font-size: clamp(10px, 1.2vw, 12px);
   border-radius: 4px;
   background: #EEEEEE;
+}
+
+.catalog__items {
+  margin-top: clamp(32px, 6.4vw, 64px);
+  display: flex;
+  flex-direction: column;
+  gap: clamp(16px, 4vw, 40px);
+}
+.catalog__item {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.catalog__category {
+  background: linear-gradient(107.11deg, transparent, rgba(255, 255, 255, 0.7) 66%, transparent);
+  padding: 32px;
+  border-radius: 16px;
+  height: 190px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.catalog__category * {
+  color: #FFFFFF;
+  position: relative;
+  z-index: 1;
+}
+.catalog__category:hover {
+  background-color: #375d97 !important;
+}
+.catalog__category:hover .catalog__category-img {
+  scale: 1.2;
+}
+.catalog__category-title {
+  font-weight: 700;
+  font-size: clamp(16px, 2.4vw, 24px);
+  max-width: 687px;
+}
+.catalog__category-btn {
+  max-width: max-content;
+}
+.catalog__category-img {
+  position: absolute;
+  z-index: 0;
+  width: 280px;
+  height: auto;
+  bottom: 0;
+  right: 0;
+  translate: 20% 50%;
+}
+@media screen and (max-width: 575.98px) {
+  .catalog__category-img {
+    width: 180px;
+  }
+}
+.catalog__subcategories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.catalog__subcategories > * {
+  flex: 0 0 calc(33.3333333333% - 5.3333333333px);
+}
+@media screen and (max-width: 767.98px) {
+  .catalog__subcategories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .catalog__subcategories > * {
+    flex: 0 0 calc(50% - 4px);
+  }
+}
+@media screen and (max-width: 575.98px) {
+  .catalog__subcategories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .catalog__subcategories > * {
+    flex: 0 0 calc(100% - 0px);
+  }
+}
+.catalog__subcategory {
+  font-size: clamp(12px, 1.4vw, 14px);
+  color: #999999;
+  padding: 12px 32px;
+  padding-right: 12px;
+  border-radius: 12px;
+  background: #EBEBEB;
+}
+.catalog__subcategory:hover {
+  background: #d9d9d9;
 }
 
 .section-404 {

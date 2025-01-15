@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/head.html',{
+        "title": "Каталог"
+    })
+    <body>
+
+        <!-- Header -->
+        @@include('html/header.html')
+
+        <main>            
+
+            <!-- Catalog -->
+            @@include('html/catalog/catalog.html')
+
+            <!-- Contact Form -->
+            @@include('html/contact-form.html')
+
+            <!-- Contact Info -->
+            @@include('html/contact-info.html')
+        </main>
+
+        <!-- Footer -->
+        @@include('html/footer.html')
+
+        <!-- Loader -->
+        @@include('html/loader.html')
+
+        <script src="js/app.min.js"></script>
+    </body>
+</html>
