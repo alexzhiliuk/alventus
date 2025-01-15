@@ -1,0 +1,83 @@
+<section class="section container">
+    @@include('breadcrumbs.html')
+    <div class="vacancies">
+        <aside class="vacancies__sidebar">
+            <h1 class="h2 vacancies__title">
+                Актуальные
+                <span data-count="8">вакансии</span>
+            </h1>
+        </aside>
+        <div class="vacancies__body">
+            <div class="vacancies__list">
+                <div class="vacancy">
+                    <div class="vacancy__header">
+                        <h3 class="vacancy__title" data-marker="HOT">Главный бухгалтер</h3>
+                        <div class="vacancy__salary">от 2000byn</div>
+                        <div class="vacancy__exp">Опыт 1-3 года</div>
+                        <div class="vacancy__icon"></div>
+                    </div>
+                    <div class="vacancy__body">
+                        <div class="vacancy__body-inner">
+                            <p class="vacancy__desc">
+                                Требуемый опыт работы: 1–3 года <br>
+                                Полная занятость, полный день
+                            </p>
+                            <div class="vacancy-info">
+                                <h4 class="vacancy-info__title">Обязанности:</h4>
+                                <ul class="vacancy-info__list">
+                                    <li>работа с маркетплейсами Wildberries и Ozon (загрузка товаров, заполнение карточек товаров, изменение цен и др.)</li>
+                                    <li>чувство вкуса в дизайне при создании креативов для товаров</li>
+                                    <li>подготовка и публикация изображений товаров</li>
+                                    <li>ответы на отзывы и вопросы от покупателей</li>
+                                </ul>
+                            </div>
+                            <div class="vacancy-info">
+                                <h4 class="vacancy-info__title">Обязанности:</h4>
+                                <div class="skills">
+                                    <div class="skill">Adobe Photoshop</div>
+                                    <div class="skill">Грамотность</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="vacancy">
+                    <div class="vacancy__header">
+                        <h3 class="vacancy__title">Дизайнер</h3>
+                        <div class="vacancy__salary">от 2000byn</div>
+                        <div class="vacancy__exp">Опыт 1-3 года</div>
+                        <div class="vacancy__icon"></div>
+                    </div>
+                    <div class="vacancy__body">
+                        <div class="vacancy__body-inner">
+                            <p class="vacancy__desc">
+                                Требуемый опыт работы: 1–3 года <br>
+                                Полная занятость, полный день
+                            </p>
+                            <div class="vacancy-info">
+                                <h4 class="vacancy-info__title">Обязанности:</h4>
+                                <ul class="vacancy-info__list">
+                                    <li>работа с маркетплейсами Wildberries и Ozon (загрузка товаров, заполнение карточек товаров, изменение цен и др.)</li>
+                                    <li>чувство вкуса в дизайне при создании креативов для товаров</li>
+                                    <li>подготовка и публикация изображений товаров</li>
+                                    <li>ответы на отзывы и вопросы от покупателей</li>
+                                </ul>
+                            </div>
+                            <div class="vacancy-info">
+                                <h4 class="vacancy-info__title">Обязанности:</h4>
+                                <div class="skills">
+                                    <div class="skill">Adobe Photoshop</div>
+                                    <div class="skill">Грамотность</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    $(".vacancy").click(function() { $(this).toggleClass("vacancy_open") })
+</script>

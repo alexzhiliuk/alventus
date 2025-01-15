@@ -2824,6 +2824,182 @@ button {
   display: block;
 }
 
+.vacancies {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+}
+@media screen and (max-width: 991.98px) {
+  .vacancies {
+    flex-direction: column;
+    align-items: unset;
+  }
+}
+.vacancies__sidebar {
+  flex: 0 0 300px;
+}
+@media screen and (max-width: 991.98px) {
+  .vacancies__sidebar {
+    flex: unset;
+  }
+}
+.vacancies__title[data-count]::after,
+.vacancies__title [data-count]::after {
+  content: " (" attr(data-count) ")";
+}
+.vacancies__body {
+  flex: 0 1 722px;
+}
+@media screen and (max-width: 991.98px) {
+  .vacancies__body {
+    flex: unset;
+  }
+}
+.vacancy {
+  border-bottom: 1px solid #3E68AA;
+  cursor: pointer;
+}
+.vacancy_open {
+  padding-bottom: 16px;
+}
+.vacancy_open .vacancy__header * {
+  color: #3E68AA;
+}
+.vacancy_open .vacancy__icon::after {
+  background-image: url(../img/vacancies/minus.svg);
+}
+.vacancy_open .vacancy__body {
+  grid-template-rows: 1fr;
+}
+@media screen and (max-width: 575.98px) {
+  .vacancy_open .vacancy__salary,
+  .vacancy_open .vacancy__exp {
+    display: block;
+  }
+}
+.vacancy__header {
+  padding: 16px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+@media screen and (max-width: 575.98px) {
+  .vacancy__header {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+}
+.vacancy__title {
+  font-size: clamp(14px, 2vw, 20px);
+  line-height: 1.1;
+  font-weight: 600;
+  flex: 0 1 45%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.vacancy__title[data-marker]::after {
+  content: attr(data-marker);
+  font-weight: 900;
+  color: #FFFFFF;
+  font-size: 10px;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 4px 8px;
+  border-radius: 4px;
+  background: #FF3D3D;
+}
+@media screen and (max-width: 575.98px) {
+  .vacancy__title {
+    flex: 0 1 calc(100% - 8px - 14px);
+  }
+}
+.vacancy__salary, .vacancy__exp {
+  font-size: clamp(12px, 1.6vw, 16px);
+  color: #999999;
+  flex: 0 0 20%;
+}
+@media screen and (max-width: 575.98px) {
+  .vacancy__salary, .vacancy__exp {
+    display: none;
+    flex: unset;
+    order: 3;
+  }
+}
+.vacancy__icon {
+  width: 14px;
+  height: 14px;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+.vacancy__icon::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background: url(../img/vacancies/arrow.svg) center center/contain no-repeat;
+}
+@media screen and (max-width: 575.98px) {
+  .vacancy__icon {
+    flex: 0 0 14px;
+  }
+}
+.vacancy__body {
+  display: grid;
+  grid-template-rows: 0fr;
+  overflow: hidden;
+}
+.vacancy__body-inner {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  font-size: clamp(12px, 1.4vw, 14px);
+  gap: 1.15em;
+}
+.vacancy__desc {
+  color: #999999;
+}
+
+.vacancy-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.vacancy-info__title {
+  font-weight: 600;
+}
+.vacancy-info__list {
+  max-width: 452px;
+}
+.vacancy-info ul {
+  list-style-type: disc;
+  list-style-position: inside;
+  text-indent: -1.35em;
+  margin-left: 1.35em;
+}
+
+.skills {
+  width: 100%;
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.skill {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  text-align: center;
+  font-size: clamp(10px, 1.2vw, 12px);
+  border-radius: 4px;
+  background: #EEEEEE;
+}
+
 @font-face {
   font-family: "swiper-icons";
   src: url("data:application/font-woff;charset=utf-8;base64, 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") format("woff");
