@@ -3084,7 +3084,6 @@ button {
 .catalog-sidebar__nav .catalog-sidebar__back-mobile {
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 14px;
   font-size: clamp(14px, 2vw, 20px);
   font-weight: 600;
