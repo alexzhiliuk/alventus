@@ -3103,15 +3103,11 @@ button {
 }
 @media screen and (max-width: 991.98px) {
   .catalog-sidebar__items {
-    gap: 0;
     border-radius: 10px;
-    overflow: hidden;
-  }
-  .catalog-sidebar__items .catalog-sidebar__item {
-    display: none;
-  }
-  .catalog-sidebar__items .catalog-sidebar__item.catalog-sidebar__item_active {
-    display: block;
+    margin-bottom: 16px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 0;
   }
   .catalog-sidebar__items_open {
     outline: 1px solid #3E68AA;
@@ -3138,17 +3134,9 @@ button {
 }
 @media screen and (max-width: 991.98px) {
   .catalog-sidebar__items a {
-    padding: 12px 32px;
-    font-size: 14px;
-    color: #999999;
-    background: #FFFFFF;
-  }
-}
-@media screen and (max-width: 991.98px) {
-  .catalog-sidebar__items {
-    display: flex;
-    flex-direction: column;
-    margin-top: 0;
+    padding: 0;
+    font-size: 16px;
+    font-weight: 500;
   }
 }
 .catalog-sidebar__item_active {
